@@ -38,7 +38,16 @@ function createTimeBlock(hour) {
     timeBlockTime.textContent = moment(hour, "HH").format("hA");
     // create element to store task
     var timeBlockDesc = document.createElement("textarea");
-    timeBlockDesc.classList.add("col-8", "description", "present");
+    timeBlockDesc.classList.add("col-8", "description");
+    console.log(hour);
+    // add past, present or future class to time block by comparing the time to the current time
+    if (parseInt(hour) < currentTime.format("H")) {
+        timeBlockDesc.classList.add("past");
+    } else if (parseInt(hour) > currentTime.format("H")) {
+        timeBlockDesc.classList.add("future");
+    } else {
+        timeBlockDesc.classList.add("present");
+    };
     timeBlockDesc.value = scheduleArr[hour - 9];
     // create element to save the task
     var timeBlockSave = document.createElement("button");
