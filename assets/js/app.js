@@ -57,23 +57,26 @@ function createTimeBlock(hour) {
 
     // append elements together and add them to the page
     timeBlockSave.appendChild(saveIcon);
-
     timeBlockRow.appendChild(timeBlockTime);
     timeBlockRow.appendChild(timeBlockDesc);
     timeBlockRow.appendChild(timeBlockSave);
-
     timeBlockSection.appendChild(timeBlockRow);
 };
 
+function saveTimeBlock(elem) {
+    scheduleArr[elem.getAttribute('data-index')] = elem.children[1].value;
+    localStorage.setItem('schedule', JSON.stringify(scheduleArr));
+}
+
 // when any save button is pressed on the page save that task to localStorage
 timeBlockSection.addEventListener('click', function (e) {
-    console.log(e.target);
-    if (e.target.tagName === 'BUTTON') {
-        scheduleArr[e.target.parentElement.getAttribute('data-index')] = e.target.parentElement.children[1].value;
-        localStorage.setItem('schedule', JSON.stringify(scheduleArr));
-
-    } else {
-        console.log("not button");
+    var elem = e.target;
+    // check if the click occured on the button or the img inside, if so pass the associated timeblock by
+    // accessing the clicked elements parents
+    if (elem.tagName === 'BUTTON') { // if element is button
+        saveTimeBlock(elem.parentElement);
+    } else if (elem.tagName === 'I') { // if element is the I inside button
+        saveTimeBlock(elem.parentElement.parentElement);
     };
 })
 
