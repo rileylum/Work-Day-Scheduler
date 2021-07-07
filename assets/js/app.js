@@ -12,7 +12,7 @@ function getSchedule() {
     storedScheduleArr = JSON.parse(localStorage.getItem('schedule'));
     if (!storedScheduleArr) {
         // empty array of length for each hour in work day
-        scheduleArr = [, , , , , , , ,];
+        scheduleArr = ['', '', '', '', '', '', '', '', ''];
     } else {
         scheduleArr = storedScheduleArr;
     };
