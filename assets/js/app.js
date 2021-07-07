@@ -2,7 +2,7 @@
 var timeBlockSection = document.querySelector(".container");
 // init variables
 // get current time from momentJS
-var currentTime = moment("3PM", "HA");
+var currentTime = moment();
 // set variables to store scheduled tasks
 var scheduleArr;
 var storedScheduleArr;
