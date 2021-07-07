@@ -6,7 +6,7 @@ A simple calendar app that allows you to record important tasks for your work da
 
 In this project I have used bootstrap to style the page, Javascript to dynamically generate the content (including using localStorage to have saved data persist between page refreshes) and MomentJS to get the current time.
 
-![*The webpage includes a header with the current time and a set of rows depicting tasks for each hour of the work day*](*add image src link*)
+![The webpage includes a header with the current time and a set of rows depicting tasks for each hour of the work day](./assets/img/WebsiteScreengrab.png)
 
 ## Usage
 
@@ -21,6 +21,7 @@ The completed website can be viewed at: https://rileylum.github.io/Work-Day-Sche
 
 ## Credits
 
-I found the following website useful for reference:
+I used bootstrap for the styling which can be found at: https://getbootstrap.com/
+I used MomentJS for interacting with time which can be found at: https://momentjs.com/
 
-*add websites and resources*
+I didn't use jquery in this app instead opting to use vanilla JS to dynamically generate the page, for which i referenced the MDN documentation for the document object: https://developer.mozilla.org/en-US/docs/Web/API/Document
