@@ -63,6 +63,8 @@ function createTimeBlock(hour) {
     timeBlockSection.appendChild(timeBlockRow);
 };
 
+// save the value from the timeblocks textbox in the corresponding positon in the 
+// schedule array and then save it in localStorage
 function saveTimeBlock(elem) {
     scheduleArr[elem.getAttribute('data-index')] = elem.children[1].value;
     localStorage.setItem('schedule', JSON.stringify(scheduleArr));
@@ -83,7 +85,7 @@ timeBlockSection.addEventListener('click', function (e) {
 function init() {
     setCurrentDay();
     getSchedule();
-
+    // call create time block to create a time block for each hour in the work day (9AM to 5PM)
     for (var i = 9; i < 18; i++) {
         createTimeBlock(i);
     }
