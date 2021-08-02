@@ -19,6 +19,8 @@ Each time block will be highlighted in the following fashion:
 
 The completed website can be viewed at: https://rileylum.github.io/Work-Day-Scheduler/
 
+![An animation showing the use of the webapp, adding tasks for each hour.](./assets/img/WebsiteAnimation.gif)
+
 ## Credits
 
 I used bootstrap for the styling which can be found at: https://getbootstrap.com/
