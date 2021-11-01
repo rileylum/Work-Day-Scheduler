@@ -2,9 +2,7 @@
 
 ## Description
 
-A simple calendar app that allows you to record important tasks for your work day!
-
-In this project I have used bootstrap to style the page, Javascript to dynamically generate the content (including using localStorage to have saved data persist between page refreshes) and MomentJS to get the current time.
+A simple calendar app that allows you to record important tasks for your work day! In this project I have used bootstrap to style the page, Javascript to dynamically generate the content (including using localStorage to have saved data persist between page refreshes) and MomentJS to get the current time.
 
 ![The webpage includes a header with the current time and a set of rows depicting tasks for each hour of the work day](./assets/img/WebsiteScreengrab.png)
 
